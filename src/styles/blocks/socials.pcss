@@ -1,0 +1,31 @@
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social__list {
+  display: flex;
+}
+
+.social__item {
+  margin-right: 37px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.social__link{
+  width: 31px;
+  height: 25px;
+  display: block;
+}
+.social__icon{
+  fill: $links-color;
+  fill-opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  &:hover{
+  fill: $main-hover;
+  fill-opacity: 1;
+  transition: fill-opacity 0.4s;
+}
+}

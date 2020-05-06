@@ -21,14 +21,20 @@ body {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   min-height: 100%;
   position: relative;
 }
 
+.wrapper__content{
+  flex: 1;
+}
+
 .container {
   margin: 0 auto;
-  max-width: 1480px;
+  max-width: 1480Px;
   width: 95%;
   // width: 1490px;
 
@@ -51,7 +57,7 @@ button {
   box-sizing: border-box;
 }
 
-ul {
+ul, li {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -80,6 +86,7 @@ button[type="button"] {
 a {
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 
 img {
