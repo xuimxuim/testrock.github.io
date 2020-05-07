@@ -12,7 +12,7 @@ html(lang="en")
     .wrapper
       .wrapper__content
         .welcome-section
-          section.protagonist
+          section#hero.protagonist
             .container.protagonist__container
               header.header.protagonist__header
                 .protagonist__logo
@@ -38,10 +38,10 @@ html(lang="en")
                     p!= 'Личный сайт <br> вэб-разработчика' 
                   .user-info__username 
                     h2!= 'Алексей <br> Сафронов'
-            a(href="#").protagonist__bottom-btn.scroll-down Скролл 
+            a(href='#about').protagonist__bottom-btn.scroll-down Скролл 
                 - var scroll = ['scroll']
                   +icon(scroll, 'scroll__icon')
-          section.about-section
+          section#about.about-section
             .container.about__container
               .about
                 .about__user-data
@@ -68,4 +68,35 @@ html(lang="en")
                     p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                   .about__ps
                     p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        
+        section#skills.values
+          section.triangles.values-section__triangles
+            svg(viewBox="0 0 1400 145" preserveAspectRatio="none").triangle__element-left.triangle
+              polygon(points="0,0 0,145 1400,145")
+            svg(viewBox="0 0 1400 145" preserveAspectRatio="none").triangle__element-right.triangle
+              polygon(points="1400,0 1800,145 0,145")
+          .values__title
+            .values__title-content
+              .longtitle
+                h2.longtitle__text Чем я могу быть вам полезен
+                .longtitle__desc 
+                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+          .values__content
+            -
+              var skills = [
+                ['frontend', ['HTML5', 'CSS3', 'javascript', 'jQuery и Vue.js']],
+              ['Workflow', ['GIT', 'Terminal', 'Gulp', 'Webpack']],
+              ]
+            ul.skills-list
+              each row in skills
+                li.skills-list__item.skills-row
+                  .skills-row__title #{row[0]}
+                  ul.skills-row__list
+                    each cell in row[1]
+                      li.skills-row__item
+                        .skill
+                          svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__shape
+                            circle(r="80" cx="100" cy="100").skill__circle.skill__circle--position--under
+                          svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__shape
+                            circle(r="80" cx="100" cy="100").skill__circle.skill__circle--position--above
+                          .skill__title #{cell}
