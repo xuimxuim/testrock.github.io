@@ -6,3 +6,5 @@ mixin icon(name, className)
 mixin image(path, className, alt)
   img(src=require(`images/${path}`) class=className)
 
+mixin sliderimg(path, className, alt)
+  img(src=require(`images/content/${path}.jpg`) class=className)

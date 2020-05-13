@@ -1,0 +1,32 @@
+.previews__list{
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 71%;
+  left: 24.8%;
+  z-index: 20;
+}
+
+.previews__item{
+  width: 174px;
+  height: 100px;
+  position: relative;
+  &:hover{
+    outline: 2px solid $outline-color;
+    outline-offset: -1px;
+  }
+  &:hover:after{
+    content: "";
+    position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: $slider-hover;
+  }
+}
+.previews__pic{
+  display: block;
+  height: 100%;
+  width: 100%;
+}

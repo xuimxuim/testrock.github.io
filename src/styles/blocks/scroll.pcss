@@ -1,15 +1,21 @@
 .scroll-down{
-  display: block;
-  width: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   height: 30px;
   color: $links-color;
+  fill: $links-color;
+
+  &:hover{
+    text-decoration: underline;
+    color: $main-hover;
+    fill: $main-hover;
+  }
 }
 
 .scroll__icon{
-  fill: $links-color;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -5%;
-  left: 285%;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
 }

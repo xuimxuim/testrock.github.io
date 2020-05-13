@@ -28,5 +28,27 @@
   font-style: italic;
   line-height: 1.675;
   margin-top: auto;
+  position: relative;
+  &::before{
+    content: "*";
+    font-size: 48px;
+    color: #1c001b;
+    font-style: italic;
+    position: absolute;
+    top: -24%;
+    left: -10%;
+  }
 }
 
+._ {
+  font-size: 48px;
+  font-family: "OpenSans";
+  color: rgba(219, 2, 0, 0.102);
+  font-style: italic;
+  line-height: 0.625;
+  text-align: left;
+  position: absolute;
+  left: 787.937px;
+  top: 1408px;
+  z-index: 39;
+}
