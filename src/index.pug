@@ -118,7 +118,7 @@ html(lang="en")
                 +image('content/guitar.png', 'guitar__img')
               .values__rockgraffiti-img
                 +image('content/graffiti.png', 'graffiti__img')
-        section.works
+        section#works.works
           .container.container__works
             h3.works__title.works-head Мои работы
             .slider
@@ -147,25 +147,59 @@ html(lang="en")
                   .slider__info Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                   .slider__link
                     +icon('link', 'slider__link-icon')
-                    a(href="https://loftschool.com").slider__link-text Посмотреть сайт
+                    a(href="https://loftschool.com" target='blank_').slider__link-text Посмотреть сайт
         .bottom-section
-          section.reviews
-            .reviews__title
-              .section-title Что обо мне говорят
-              .reviews__slider-controls
-            ul.reviews__slider
-              - for (var i = 0; i < 2; i++)
-                li.reviews__slider-item
-                  .quote
-                    .quote__text
-                    .quote__author
-                      .user.user--horizontal
-                        .user__avatar
-                          img(src="", alt="").user__avatar-pic
-                        .user__data
-                          .user__name Ковальчук Дмитрий
-                          .user__occ Основатель Loftschool
-                      
+          section#reviews.reviews
+            .container.reviews__container
+              .reviews__title
+                .section-title Что обо мне говорят
+                .reviews__slider-controls
+                  button.reviews__slider-controls-prev.review-slider-btn <
+                  button.reviews__slider-controls-next.review-slider-btn >
+              ul.reviews__slider
+                - for (var i = 0; i < 2; i++)
+                  li.reviews__slider-item
+                    .quote
+                      +icon('quote', 'quote__pic')
+                      .quote__text
+                        p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                      .quote__author
+                        .user-reviews
+                          .user__avatar-reviews.avatar-small
+                          .user__data
+                            .user__name Ковальчук Дмитрий
+                            .user__occ Основатель Loftschool
+          section#contacts.form-section
+            .container.form__container
+              .form__title Связаться со мной
+              .form-contacts  
+                .form__wrapper
+                  form.form
+                    .form__elements
+                      -
+                        var contacts = [
+                        ['user', 'Введите ваше имя', 'Ковальчук Дмитрий'],
+                        ['envelope', 'Введите ваш email', 'loftschool@study.com'],
+                        ];
+                      each item in contacts
+                        label.form-block 
+                          .form-block__title  #{item[1]}
+                          .form-block__container
+                            +icon(`${item[0]}`, 'form-block__icon') 
+                            .form-block__field
+                              input(type="text" placeholder=item[2]).form-block__input
+                    .form__contacts.form__contacts-mrgn
+                      label.form-block 
+                        .form-block__title  Сообщение к письму
+                        .form-block__container.form-block__container__align-top
+                          +icon('message', 'form-block__icon') 
+                          .form-block__field
+                            textarea.form-block__input.form-textarea(
+                              placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса"
+                            )
+                    .form__button
+                      input(type="submit" value="отправить").form__submit-button.gradient-btn
+
 
 
 
