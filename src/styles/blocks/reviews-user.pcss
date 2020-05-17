@@ -1,19 +1,20 @@
 .user-reviews{
   display: flex;
-  
+  position: relative;
 }
-
+@each $portrait in (review1, review2) {
 .user__avatar-reviews{
   width: 75px;
   height: 75px;
   overflow: hidden;
   border-radius: 50%;
-  background: url('../images/content/review1.png') 53% 12% no-repeat;
+  background: url('../images/content/#{$portrait}.png') 53% 12% no-repeat;
+  }
 }
+
 .avatar-small {
   margin-right: 20px;
 }
-
 
 .user__data{
   display: flex;

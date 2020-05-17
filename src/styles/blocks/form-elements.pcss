@@ -9,8 +9,13 @@
   border-bottom: 1px solid #ffffff;
   padding-bottom: 14px;
   flex: 1;
+  fill: $form-icon;
   &:last-child {
     margin-right: 0;
+  }
+  &:hover{
+    border-color: $main-hover;
+    fill: $main-hover;
   }
 }
 
@@ -36,14 +41,20 @@
 .form-block__icon {
   width: 30px;
   height: 30px;
-  fill: #484457;
   opacity: .3;
   margin-right: 16px;
+  &:hover{
+    opacity: 1;
+    transition: opacity 0.4s;
+  }
 }
 
 .form__contacts{
   width: 75%;
   border-bottom: 1px solid #ffffff;
+  &:hover{
+    border-color: $main-hover;
+  }
 }
 
 .form__contacts-mrgn{
