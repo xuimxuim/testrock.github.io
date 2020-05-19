@@ -1,0 +1,30 @@
+section#contacts.form-section
+            .container.form__container
+              .form__title Связаться со мной
+              .form-contacts  
+                .form__wrapper
+                  form.form
+                    .form__elements
+                      -
+                        var contacts = [
+                        ['user', 'Введите ваше имя', 'Ковальчук Дмитрий'],
+                        ['envelope', 'Введите ваш email', 'loftschool@study.com'],
+                        ];
+                      each item in contacts
+                        label.form-block 
+                          .form-block__title  #{item[1]}
+                          .form-block__container
+                            +icon(`${item[0]}`, 'form-block__icon') 
+                            .form-block__field
+                              input(type="text" placeholder=item[2]).form-block__input
+                    .form__contacts.form__contacts-mrgn
+                      label.form-block 
+                        .form-block__title  Сообщение к письму
+                        .form-block__container.form-block__container__align-top
+                          +icon('message', 'form-block__icon') 
+                          .form-block__field
+                            textarea.form-block__input.form-textarea(
+                              placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса"
+                            )
+                    .form__button
+                      input(type="submit" value="отправить").form__submit-button.gradient-btn

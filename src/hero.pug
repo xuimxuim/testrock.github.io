@@ -1,0 +1,28 @@
+section#hero.protagonist
+            .container.protagonist__container
+              header.header.protagonist__header
+                .protagonist__logo
+                  .logo ba
+                .header__menu
+                  nav.nav 
+                    - var items = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"];
+                    ul.nav__list
+                      each item in items
+                        li.nav__item
+                          a(href='#').nav__link #{item}
+                .header__links
+                  - var ntwrk = ["insta", "vk", "github"];
+                  ul.social__list 
+                  each item in ntwrk
+                    li.social__item 
+                      a(href="#").social__link
+                        +icon(item, 'social__icon')
+              .protagonist__content
+               .user-info
+                .user-info__block
+                  .user-info__desc 
+                    p!= 'Личный сайт <br> вэб-разработчика' 
+                  .user-info__username 
+                    h2!= 'Алексей <br> Сафронов'
+            a(href='#about').protagonist__bottom-btn.scroll-down Скролл 
+              +icon('scroll', 'scroll__icon')
