@@ -6,7 +6,7 @@ section#works.works
                 .slider__wrapper
                   .slider__inner
                     .slider__active-image
-                      img.slider__active-image-img(src="/src/images/content/preview.jpg", alt="превью работы")
+                      +image('content/preview.jpg', 'slider__active-image-img')
                     .slider__slides
                       ul.previews__list
                         - for (var i = 0; i < 4; i++)
