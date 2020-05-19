@@ -3,18 +3,14 @@
   justify-content: flex-end;
   position: absolute;
   top: 71%;
-  left: 24.8%;
+  left: 23.7%;
   z-index: 20;
 }
 
 .previews__item{
-  width: 174px;
+  width: 177px;
   height: 100px;
   position: relative;
-  &:hover{
-    outline: 2px solid $outline-color;
-    outline-offset: -1px;
-  }
   &:hover:after{
     content: "";
     position: absolute;
@@ -24,6 +20,9 @@
      left: 0;
      background: $slider-hover;
   }
+  &--active:hover{
+    outline: 3px solid $outline-color;
+}
 }
 .previews__pic{
   display: block;
