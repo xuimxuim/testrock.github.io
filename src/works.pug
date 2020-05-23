@@ -10,7 +10,7 @@ section#works.works
                     .slider__slides
                       ul.previews__list
                         - for (var i = 0; i < 4; i++)
-                          li.previews__item.previews__item--active
+                          li.previews__item(class= (i === 0) ? 'previews__item--active' : '')
                             +sliderimg(i, 'previews__pic', 'превью картинка')
                     .slider__nav
                       .slider-button

@@ -6,21 +6,11 @@
 
 .form-block {
   margin-right: 55px;
-  border-bottom: 1px solid #ffffff;
-  padding-bottom: 14px;
   flex: 1;
-  fill: $form-icon;
   &:last-child {
     margin-right: 0;
   }
-  &:hover{
-    border-color: $main-hover;
-    fill: $main-hover;
-  }
-  &:focus{
-    border-color: $main-hover;
-    fill: $main-hover;
-  }
+
 }
 
 .form-block__title{
@@ -36,6 +26,11 @@
 .form-block__container {
   display: flex;
   align-items: center;
+  fill: $form-icon;
+  position: relative;
+  &:hover{
+    fill: $main-hover;
+  }
   &__align-top {
     align-items: flex-start;
   }
@@ -46,6 +41,9 @@
   height: 30px;
   margin-right: 16px;
   opacity: .3;
+  position: absolute;
+  top: -10%;
+  left: 0%;
   &:hover{
     opacity: 1;
     transition: opacity 0.4s;
@@ -54,13 +52,6 @@
 
 .form__contacts{
   width: 77%;
-  border-bottom: 1px solid #ffffff;
-  &:hover{
-    border-color: $main-hover;
-  }
-  &:focus{
-    border-color: $main-hover;
-  }
 }
 
 .form__contacts-mrgn{
@@ -75,6 +66,7 @@
   background: transparent;
   border: 0 none;
   width: 100%;
+  border-bottom: 1px solid #ffffff;
   color: #ffffff;
   &::placeholder {
     color: #ffffff;
@@ -84,11 +76,23 @@
   }
   &:focus {
     outline: none;
+    border-color: $main-hover;
+    fill: $main-hover;
+  }
+  &:hover {
+    border-color: $main-hover;
+    fill: $main-hover;
   }
 }
+.form-person-input{
+  padding-left: 50px;
+  padding-bottom: 14px;
+}
 .form-textarea{
-  width: 85%;
+  width: 100%;
   resize: none;
+  border-bottom: 1px solid #ffffff;
   padding-bottom: 22px;
+  padding-left: 50px;
 }
 
